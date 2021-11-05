@@ -1,0 +1,498 @@
+#VRML_SIM R2021b utf8
+WorldInfo {
+  info [
+    "Autonomous Vehicle Simulation"
+  ]
+  title "CSCI4302/5302: Autonomous Vehicle Challenge Course"
+  ERP 0.6
+  basicTimeStep 10
+  coordinateSystem "NUE"
+  lineScale 1
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "CitroenCZeroWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "ToyotaPriusWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "LincolnMKZWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "RangeRoverSportSVRWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "TruckWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.8692731173158129 0.4887518539019154 0.07406667819937711 5.937989574122442
+  position -6.540162823239045 11.020680369955949 27.18445620042567
+  follow "vehicle"
+  followType "Mounted Shot"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Fog {
+  color 0.38 0.35 0.32
+  visibilityRange 1000
+}
+DEF GROUND Solid {
+  translation 0 -0.05 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        baseColorMap ImageTexture {
+          url [
+            "../textures/ground_grass.jpg"
+          ]
+        }
+        roughness 0.5
+        metalness 0
+        textureTransform TextureTransform {
+          scale 500 500
+        }
+      }
+      geometry DEF GROUND_PLANE Plane {
+        size 500 500
+      }
+    }
+  ]
+  boundingObject USE GROUND_PLANE
+  locked TRUE
+}
+CurvedRoadSegment {
+  translation 10.0723 0 -58.1192
+  rotation 0 1 0 3.14159
+  name "road(7)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation 29.6165 0 -18.355
+  rotation 0 1 0 3.14159
+  name "road(23)"
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation 48.9323 0 -58.1192
+  rotation 0 -1 0 -1.5707953071795862
+  name "road(12)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation 68.4402 0 -18.5957
+  rotation 0 1 0 -5.307179586466759e-06
+  name "road(17)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation 9.60495 -1.42109e-13 28.3285
+  rotation 0 1 0 -5.307179586466759e-06
+  name "road(29)"
+  leftBarrier TRUE
+  locked FALSE
+  roadBoundingObject TRUE
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+CurvedRoadSegment {
+  translation 9.99295 3.97904e-12 28.3365
+  rotation 0 1 0 -1.5708053071795867
+  name "road(21)"
+  leftBarrier TRUE
+  locked FALSE
+  rightBarrierBoundingObject FALSE
+  leftBarrierBoundingObject FALSE
+}
+CurvedRoadSegment {
+  translation 49.4002 0 -18.5957
+  rotation 0 1 0 -1.5708053071795867
+  name "road(30)"
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation 68.4402 0 -18.3657
+  rotation 0 -1 0 -1.5707953071795862
+  name "road(18)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation 29.4102 0 -18.3657
+  rotation 0 -1 0 -1.5707953071795862
+  name "road(22)"
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation 48.9323 0 -58.1192
+  rotation 0 -1 0 -1.5707953071795862
+  name "road(15)"
+  leftBarrier TRUE
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation 68.9428 0 -38.3512
+  rotation 0 1 0 -1.5707953071795862
+  name "road(16)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 0 0 -29
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 0 0 -38.43
+  name "road(4)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation -0.031972 0 -48.2
+  rotation 0 1 0 0.00327249
+  name "road(5)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 0 0 -58.15
+  name "road(6)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 58.93 0 -58.15
+  name "road(13)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 58.93 0 -48.28
+  name "road(14)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 19.63 0 -18.94
+  name "road(24)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 19.63 0 -9.07
+  name "road(25)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 19.63 0 -0.03
+  name "road(26)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 19.63 0 9.71
+  name "road(27)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 19.63 0 18.74
+  name "road(28)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 19.8944 0 -68.1102
+  rotation 0 1 0 -1.5707953071795862
+  name "road(8)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 29.7444 0 -68.1102
+  rotation 0 1 0 -1.5707953071795862
+  name "road(9)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 39.7044 0 -68.1102
+  rotation 0 -0.9999999999999999 0 1.5707953071795862
+  name "road(10)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 68.6619 0 -8.61052
+  rotation 0 -0.9999999999999999 0 1.5707953071795862
+  name "road(19)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 48.9944 0 -68.1102
+  rotation 0 -0.9999999999999999 0 1.5707953071795862
+  name "road(11)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 58.7744 0 -8.61
+  rotation 0 -0.9999999999999999 0 1.5707953071795862
+  name "road(20)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation -0.0202455 0 -19.9627
+  name "road(3)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 0 0 -10.1714
+  name "road(1)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  bottom TRUE
+  roadBoundingObject TRUE
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+StraightRoadSegment {
+  translation 0 0 -0.42
+  name "starting_line(1)"
+  lines [
+    RoadLine {
+      color 0 1 0
+      type "continuous"
+      width 8
+    }
+    RoadLine {
+    }
+  ]
+  rightBarrier TRUE
+  leftBarrier TRUE
+  length 1
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 0 0 8.9
+  name "road(31)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 0 0 0.1
+  name "road(33)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  length 9
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 0 0 18.52
+  name "road(32)"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  locked FALSE
+}
+BigGlassTower {
+  translation 45.79 0 -46.96
+}
+Atm {
+  translation 50.21 0 -2.03
+  rotation 0 1 0 -3.1415853071795863
+}
+StripBuilding {
+  translation 93.5 0 -88.11
+  rotation 0 1 0 3.14159
+}
+PhoneBooth {
+  translation 67.99 0 0
+  rotation 0 1 0 -3.1415853071795863
+}
+Forest {
+  translation 79.03 0 -55.91
+  rotation 0 1 0 1.5708
+  groundTexture []
+  maxHeight 18
+}
+IntermodalOfficeContainer {
+  translation -10.96 0 -30.9199
+  rotation 0 1 0 1.5708
+}
+Carwash {
+  translation -11.18 0 27.56
+  rotation 0 1 0 -1.5707953071795862
+}
+LincolnMKZSimple {
+  translation -10.79 0.4 19.61
+  name "vehicle(5)"
+}
+TeslaModel3 {
+  translation -0.0133992 0.273001 4.03698
+  rotation -2.8032618858597635e-06 0.9999938039275577 0.0035202412750921282 3.1400000098682854
+  color 1 0 0
+  plate [
+    "../textures/license.png"
+  ]
+  controller "av_challenge_controller"
+  controllerArgs [
+    ""
+  ]
+  sensorsSlotFront [
+    SickLms291 {
+      translation 0 -0.06 0
+      rotation 0 1 0 3.14159
+    }
+  ]
+  sensorsSlotRear [
+    Camera {
+      translation 0 -0.11 -0.11
+      rotation 0 1 0 3.14159
+      children [
+        Transform {
+          translation 0 0 0.05
+          rotation 1 0 0 1.57
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Cylinder {
+                height 0.1
+                radius 0.04
+              }
+            }
+          ]
+        }
+      ]
+      name "rear_camera"
+      fieldOfView 1
+      width 128
+    }
+  ]
+  sensorsSlotTop [
+    Camera {
+      translation 0 -0.11 -0.48
+      children [
+        Transform {
+          translation 0 0 0.05
+          rotation 1 0 0 1.57
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Cylinder {
+                height 0.1
+                radius 0.04
+              }
+            }
+          ]
+        }
+      ]
+      name "front_camera"
+      fieldOfView 1
+      width 128
+    }
+  ]
+  sensorsSlotCenter [
+    Gyro {
+    }
+    GPS {
+    }
+  ]
+}
+Ball {
+  translation 5.5268 0.75 -9.56974
+  radius 0.75
+}
+BungalowStyleHouse {
+  translation 30.7141 -2.13163e-14 11.9407
+}

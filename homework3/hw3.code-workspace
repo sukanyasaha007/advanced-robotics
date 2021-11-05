@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "HW3"
+		}
+	],
+	"settings": {
+		"files.watcherExclude": {
+			"**/target": true
+		}
+	}
+}

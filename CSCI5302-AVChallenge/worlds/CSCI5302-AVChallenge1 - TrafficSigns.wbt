@@ -1,0 +1,405 @@
+#VRML_SIM R2021b utf8
+WorldInfo {
+  info [
+    "Autonomous Vehicle Simulation"
+  ]
+  title "CSCI4302/5302: Autonomous Vehicle Challenge Course"
+  ERP 0.6
+  basicTimeStep 10
+  coordinateSystem "NUE"
+  lineScale 1
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "CitroenCZeroWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "ToyotaPriusWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "LincolnMKZWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "RangeRoverSportSVRWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "TruckWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.9949892122498724 0.0979814292050445 0.019902437974160817 5.880424560479212
+  position -42.45245255669303 33.45645317714256 241.6328814634212
+  follow "vehicle"
+  followType "Mounted Shot"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Fog {
+  color 0.38 0.35 0.32
+  visibilityRange 1000
+}
+DEF GROUND Solid {
+  translation -42 -0.05 117
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        baseColorMap ImageTexture {
+          url [
+            "../textures/ground_grass.jpg"
+          ]
+        }
+        roughness 0.5
+        metalness 0
+        textureTransform TextureTransform {
+          scale 500 500
+        }
+      }
+      geometry DEF GROUND_PLANE Plane {
+        size 250 250
+      }
+    }
+  ]
+  boundingObject USE GROUND_PLANE
+  locked TRUE
+}
+StraightRoadSegment {
+  translation -40.0713 0 168.87
+  name "starting_line(2)"
+  lines [
+    RoadLine {
+      color 0 1 0
+      type "continuous"
+      width 8
+    }
+    RoadLine {
+    }
+  ]
+  rightBarrier TRUE
+  leftBarrier TRUE
+  length 1
+  locked FALSE
+}
+StraightRoadSegment {
+  translation -40.01 0 105.58
+  name "road(34)"
+  length 69
+  locked FALSE
+}
+StraightRoadSegment {
+  translation 8.48 0 102.68
+  name "road(42)"
+  length 70
+  locked FALSE
+}
+StraightRoadSegment {
+  translation -27.09 0 92.94
+  rotation 0 1 0 1.5708
+  name "road(44)"
+  length 26
+  locked FALSE
+}
+Roundabout {
+  translation -39.9945 0 92.9673
+  rotation 0 1 0 -0.785395307179586
+  locked FALSE
+}
+StraightRoadSegment {
+  translation -92.36 0 92.98
+  rotation 0 1 0 1.5708
+  name "road(35)"
+  length 40
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation -92.3 0 102.98
+  rotation 0 1 0 3.14159
+  name "road(36)"
+  locked FALSE
+}
+StraightRoadSegment {
+  translation -102.32 0 102.76
+  name "road(37)"
+  length 70
+  locked FALSE
+}
+RoadIntersection {
+  translation -39.9676 3.83693e-13 182.656
+  rotation 0 1 0 -0.785395307179586
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation -92.32 0 172.64
+  rotation 0 1 0 -1.5707953071795862
+  name "road(38)"
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation -1.52 0 172.64
+  rotation 0 1 0 1.01503e-06
+  name "road(41)"
+  locked FALSE
+}
+CurvedRoadSegment {
+  translation -1.52 0 102.97
+  rotation 0 1 0 1.5708
+  name "road(43)"
+  locked FALSE
+}
+StraightRoadSegment {
+  translation -92.46 0 182.65
+  rotation 0 1 0 1.5708
+  name "road(39)"
+  length 44
+  locked FALSE
+}
+StraightRoadSegment {
+  translation -31.47 0 182.65
+  rotation 0 1 0 1.5708
+  name "road(40)"
+  length 30
+  locked FALSE
+}
+GenericTrafficLight {
+  translation -34.1 0 177.67
+  rotation 0 1 0 1.5708
+  greenTime 30
+  state "green"
+}
+GenericTrafficLight {
+  translation -46.75 0 188.1
+  rotation 0 1 0 -1.5707953071795862
+  name "generic traffic light(1)"
+  startGreen FALSE
+  greenTime 30
+  state "green"
+}
+StopSign {
+  translation -46.6615 0 101.728
+  rotation 0 1 0 3.14159
+}
+StopSign {
+  translation -35.1111 3.55271e-15 108.05
+  rotation 0 1 0 3.14159
+  name "stop sign(3)"
+}
+StopSign {
+  translation -49.5515 0 86.428
+  rotation 0 -1 0 -1.5707953071795862
+  name "stop sign(1)"
+}
+StopSign {
+  translation -30.5115 0 98.698
+  rotation 0 -1 0 1.5708
+  name "stop sign(2)"
+}
+YieldSign {
+  translation -49.74 0 98.87
+  rotation 0 -1 0 -1.5708053071795867
+}
+YieldSign {
+  translation -31.65 0 101.03
+  rotation 0 1 0 -3.1415853071795863
+  name "yield sign(1)"
+}
+YieldSign {
+  translation -30.83 0 86.99
+  rotation 0 -1 0 1.57079
+  name "yield sign(2)"
+}
+PedestrianCrossing {
+  translation -39.91 0 103.44
+  size 8 5
+}
+PedestrianCrossing {
+  translation -39.91 0 82.06
+  name "pedestrian crossing(3)"
+  size 8 5
+}
+PedestrianCrossing {
+  translation -29.32 0 92.97
+  rotation 0 1 0 1.5708
+  name "pedestrian crossing(1)"
+  size 8 5
+}
+PedestrianCrossing {
+  translation -50.82 0 92.97
+  rotation 0 1 0 1.5708
+  name "pedestrian crossing(2)"
+  size 8 5
+}
+OrderSign {
+  translation -46.04 0 82.38
+  rotation 0 1 0 3.14159
+}
+SpeedLimitSign {
+  translation -35.3668 0 165.024
+  rotation 0 1 0 3.14159
+}
+SpeedLimitSign {
+  translation -8.87001 0 188.03
+  rotation 0 -1 0 -1.5707953071795862
+  name "speed limit(3)"
+  signBoards [
+    SpeedLimitPanel {
+      translation 0 0 -0.023
+      signImage [
+        "textures/signs/us/speed_limit_20.jpg"
+      ]
+    }
+  ]
+}
+SpeedLimitSign {
+  translation -88.15 0 88.3
+  rotation 0 -1 0 1.83261
+  name "speed limit(1)"
+  signBoards [
+    SpeedLimitPanel {
+      translation 0 0 -0.023
+      signImage [
+        "textures/signs/us/speed_limit_30.jpg"
+      ]
+    }
+  ]
+}
+SpeedLimitSign {
+  translation -82.2547 0 188.239
+  rotation 0 -1 0 1.57081
+  name "speed limit(2)"
+  signBoards [
+    SpeedLimitPanel {
+      translation 0 0 -0.023
+      signImage [
+        "textures/signs/us/speed_limit_30.jpg"
+      ]
+    }
+  ]
+}
+TeslaModel3 {
+  translation -37.9846 0.273001 174.189
+  rotation -2.8032618858597635e-06 0.9999938039275577 0.0035202412750921282 3.1400000098682854
+  color 1 0 0
+  plate [
+    "../textures/license.png"
+  ]
+  controller "av_challenge_controller"
+  controllerArgs [
+    ""
+  ]
+  sensorsSlotFront [
+    SickLms291 {
+      translation 0 -0.06 0
+      rotation 0 1 0 3.14159
+    }
+  ]
+  sensorsSlotRear [
+    Camera {
+      translation 0 -0.11 -0.11
+      rotation 0 1 0 3.14159
+      children [
+        Transform {
+          translation 0 0 0.05
+          rotation 1 0 0 1.57
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Cylinder {
+                height 0.1
+                radius 0.04
+              }
+            }
+          ]
+        }
+      ]
+      name "rear_camera"
+      fieldOfView 1
+      width 128
+    }
+  ]
+  sensorsSlotTop [
+    Camera {
+      translation 0 -0.11 -0.48
+      children [
+        Transform {
+          translation 0 0 0.05
+          rotation 1 0 0 1.57
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Cylinder {
+                height 0.1
+                radius 0.04
+              }
+            }
+          ]
+        }
+      ]
+      name "front_camera"
+      fieldOfView 1
+      width 128
+    }
+  ]
+  sensorsSlotCenter [
+    Gyro {
+    }
+    GPS {
+    }
+  ]
+}
