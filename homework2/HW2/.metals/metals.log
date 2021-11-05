@@ -1,0 +1,32 @@
+[0m2021.09.23 23:41:11 INFO  Started: Metals version 0.10.7 in workspace '/Users/sukanyasaha/Google Drive/Advanced-Robotics/homework2/HW2' for client Visual Studio Code 1.60.1.[0m
+[0m2021.09.23 23:41:17 INFO  time: initialize in 6.01s[0m
+[0m2021.09.23 23:41:18 WARN  Build server is not auto-connectable.[0m
+[0m2021.09.23 23:41:18 WARN  no build tool detected in workspace '/Users/sukanyasaha/Google Drive/Advanced-Robotics/homework2/HW2'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.09.27 16:32:33 INFO  shutting down Metals[0m
+[0m2021.10.08 07:51:05 INFO  Started: Metals version 0.10.7 in workspace '/Users/sukanyasaha/Google Drive/Advanced-Robotics/homework2/HW2' for client Visual Studio Code 1.60.2.[0m
+[0m2021.10.08 07:51:09 INFO  time: initialize in 4.88s[0m
+[0m2021.10.08 07:51:10 WARN  Build server is not auto-connectable.[0m
+[0m2021.10.08 07:51:10 WARN  no build target for: /Users/sukanyasaha/Downloads/week7_solutions.sc[0m
+[0m2021.10.08 07:51:20 INFO  no build target: using presentation compiler with only scala-library: 2.12.15[0m
+[0m2021.10.08 07:51:26 INFO  time: code lens generation in 10s[0m
+[0m2021.10.08 07:51:26 INFO  time: code lens generation in 2.57s[0m
+Oct 08, 2021 9:28:59 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 13
+java.lang.NullPointerException
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$maybeImport$3(Ammonite.scala:211)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$maybeImport$3$adapted(Ammonite.scala:208)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+[0m2021.10.12 18:05:34 INFO  shutting down Metals[0m
+[0m2021.11.02 15:56:29 INFO  Started: Metals version 0.10.8 in workspace '/Users/sukanyasaha/Google Drive/Advanced-Robotics/homework2/HW2' for client Visual Studio Code 1.61.2.[0m
+[0m2021.11.02 15:56:33 INFO  time: initialize in 4.86s[0m
+[0m2021.11.02 15:56:34 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.02 15:56:34 INFO  skipping build import with status 'Requested'[0m
+[0m2021.11.02 20:20:55 INFO  shutting down Metals[0m
+[0m2021.11.05 17:32:19 INFO  Started: Metals version 0.10.9 in workspace '/Users/sukanyasaha/Google Drive/Advanced-Robotics/homework2/HW2' for client Visual Studio Code 1.61.2.[0m
+[0m2021.11.05 17:32:24 INFO  time: initialize in 4.86s[0m
+[0m2021.11.05 17:32:25 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.05 17:32:25 INFO  skipping build import with status 'Requested'[0m
+[0m2021.11.05 17:41:55 INFO  shutting down Metals[0m
